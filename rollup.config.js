@@ -8,7 +8,7 @@ import {
   preprocess,
   createEnv,
   readConfigFile
-} from "@pyoner/svelte-ts-preprocess";
+} from "svelte-ts-preprocess";
 
 const production = !process.env.ROLLUP_WATCH;
 

@@ -3,8 +3,6 @@
   "name": "svelte-ts-template",
   "version": "1.0.0",
   "devDependencies": {
-    "@pyoner/svelte-ts-preprocess": "^1.0.1",
-    "@pyoner/svelte-types": "^3.4.4-2",
     "@typescript-eslint/eslint-plugin": "^1.10.2",
     "@typescript-eslint/parser": "^1.10.2",
     "eslint": "^5.16.0",
