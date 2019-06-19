@@ -1,14 +1,10 @@
-import svelte from "rollup-plugin-svelte";
-import resolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
-import { terser } from "rollup-plugin-terser";
-import typescript from "rollup-plugin-typescript2";
+import svelte from 'rollup-plugin-svelte';
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
+import { terser } from 'rollup-plugin-terser';
+import typescript from 'rollup-plugin-typescript2';
 
-import {
-  preprocess,
-  createEnv,
-  readConfigFile
-} from "svelte-ts-preprocess";
+import { preprocess, createEnv, readConfigFile } from 'svelte-ts-preprocess';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -18,17 +14,17 @@ const opts = {
   env,
   compilerOptions: {
     ...compilerOptions,
-    allowNonTsExtensions: true
-  }
+    allowNonTsExtensions: true,
+  },
 };
 
 export default {
-  input: "src/main.ts",
+  input: 'src/main.ts',
   output: {
     sourcemap: true,
-    format: "iife",
-    name: "app",
-    file: "public/bundle.js"
+    format: 'iife',
+    name: 'app',
+    file: 'public/bundle.js',
   },
   plugins: [
     svelte({
@@ -37,9 +33,9 @@ export default {
       // we'll extract any component CSS out into
       // a separate file — better for performance
       css: css => {
-        css.write("public/bundle.css");
+        css.write('public/bundle.css');
       },
-      preprocess: preprocess(opts)
+      preprocess: preprocess(opts),
     }),
 
     // If you have external dependencies installed from
@@ -53,6 +49,6 @@ export default {
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
-    production && terser()
-  ]
+    production && terser(),
+  ],
 };
