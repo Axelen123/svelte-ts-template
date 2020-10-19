@@ -1,4 +1,5 @@
-# Typescript template for Svelte v3
+# Deprecated
+Please use the official svelte typescript tooling instead.
 
 ---
 
